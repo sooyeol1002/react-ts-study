@@ -13,9 +13,9 @@ export const user = {
 // 기본 모듈 내보내기
 export default {
   version: '1.0',
-  creator: 'GangChan Park'
+  creator: 'Sooyeol Yang'
 };
-module.export = {
-  greet,
-  appName
-}
+// module.export = {
+//   greet,
+//   appName
+// }
