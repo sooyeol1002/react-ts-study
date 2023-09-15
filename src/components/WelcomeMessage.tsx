@@ -1,5 +1,13 @@
-const WelcomeMessage = () => {
-  const name = "ChatGPT";
+interface WelcomeMessageProps {
+  name?: string;
+}
+
+// 리액트에서 컴포넌트 함수인데,
+// JSX.Element를 반환하는 함수
+
+// React 컴포넌트는 매개변수를 객체로 받아야함
+const WelcomeMessage = ({ name = "ChatGPT" }: WelcomeMessageProps) => {
+  // const name = "ChatGPT";
 
   // <></>: Fragment
   // JSX: js 가상DOM 객체, HTML 스타일로 작성
