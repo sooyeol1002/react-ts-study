@@ -1,0 +1,24 @@
+const WelcomeMessage = () => {
+  const name = "ChatGPT";
+
+  // <></>: Fragment
+  // JSX: js 가상DOM 객체, HTML 스타일로 작성
+  // <></>: JSX Element
+
+  // 컴포넌트에서 최상위 부모엘리먼트는 1개만 존재
+  // return <></>;
+  return (
+    <div>
+      {/* 바인딩(bind): 데이터(변수값)을 템플릿에 출력 */}
+      {/* 리액트는 단방향 바인딩만 지원 코드 -> 템플릿 */}
+      {/* {name}: Jsx의 자바스크립트 표현식 */}
+
+      {/* jsx: 속성={값} */}
+      {/* jsx: 속성={객체} */}
+      <h1 style={{ color: "green" }}>Welcome, {name}! </h1>
+      <p>This is an example of JSX in React.</p>
+    </div>
+  );
+};
+
+export default WelcomeMessage;
