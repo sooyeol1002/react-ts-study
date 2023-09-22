@@ -1,9 +1,27 @@
 import { Suspense } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
+import { useProfileData } from "./modules/profile/data";
 
 function Layout() {
+  // swr 데이터 -> 상태값
+  // 데이터가 변경되면 컴포넌트가 다시 렌더링된다.
+  const { profileData } = useProfileData();
+  const { nickname } = profileData;
+  // console.log(profileData);
+
+  const navigate = useNavigate();
+
+  const handleEditProfile = () => {
+    navigate("/profile/edit");
+  };
+
   return (
-    <div id="layout">
+    <div>
+      <header>
+        <em style={{ cursor: "pointer" }} onClick={handleEditProfile}>
+          {nickname}
+        </em>
+      </header>
       {/* 링크들이 들어가는 곳 */}
       <nav>
         <ul style={{ display: "flex", gap: "40px" }}>
