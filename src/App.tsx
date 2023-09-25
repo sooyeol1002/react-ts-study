@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 // import Todo from "./modules/todo/Todo";
 import Layout from "./Layout";
 import { Suspense, lazy } from "react";
+import PostList from "./modules/post/PostList";
 
 const ContactSidebar = lazy(() => import("./modules/contacts/ContactSidebar"));
 const ContactList = lazy(() => import("./modules/contacts/ContactList"));
@@ -45,7 +46,8 @@ const App = () => {
           {/* index: 해당경로의 기본 화면 */}
           <Route element={<Home />} index />
           {/* 기능 모듈 */}
-          <Route path="/profile/edit" element={<ProfileEdit />} />
+          <Route path="posts" element={<PostList />} />
+          <Route path="profile/edit" element={<ProfileEdit />} />
 
           <Route path="todo" element={<Todo />} index />
           {/* /contacts */}

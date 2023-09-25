@@ -38,6 +38,9 @@ function Layout() {
           <li>
             <Link to="/contacts">Contacts</Link>
           </li>
+          <li>
+            <Link to="/posts">Posts</Link>
+          </li>
         </ul>
       </nav>
       {/* 세부 화면들이 나오는 곳 */}
