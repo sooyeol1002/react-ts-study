@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Layout from "./Layout";
 import { Suspense, lazy } from "react";
 import PostList from "./modules/post/PostList";
+import OrderNotification from "./modules/order/OrderNotification/OrderNotification";
 
 const ContactSidebar = lazy(() => import("./modules/contacts/ContactSidebar"));
 const ContactList = lazy(() => import("./modules/contacts/ContactList"));
@@ -39,6 +40,7 @@ const App = () => {
     // 페이지: index.html 1개
     // 경로에 맞는 컴포넌트를 스크립트로 로딩
     <BrowserRouter>
+      <OrderNotification />
       {/* 컴포넌트를 동적으로 로딩할 때 지연시간동안 보여주는 요소  */}
       <Routes>
         <Route path="/" element={<Layout />}>
